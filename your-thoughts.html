@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Thoughts | Career Exploration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #2ecc71;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .reflection-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: var(--light);
+        }
+        .reflection-section h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .career-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .comparison-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--accent);
+        }
+        .comparison-card:hover {
+            transform: translateY(-5px);
+        }
+        .comparison-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        .conclusion {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        form {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .career-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .social-icons {
+            margin: 1rem 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Thoughts</h1>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="mechanical-engineer.html"><i class="fas fa-cogs"></i> Mechanical Engineer</a>
+        <a href="costco-warehouse.html"><i class="fas fa-boxes"></i> Costco Warehouse</a>
+        <a href="pilot.html"><i class="fas fa-plane"></i> Pilot</a>
+        <a href="your-thoughts.html"><i class="fas fa-comment"></i> Your Thoughts</a>
+    </nav>
+    <div class="container">
+        <div class="reflection-section">
+            <h2><i class="fas fa-lightbulb"></i> My Career Reflections</h2>
+            <p>After researching these three very different career paths, I've gained valuable insights about each profession and how they might fit with my skills, interests, and lifestyle preferences.</p>
+            
+            <div class="career-comparison">
+                <div class="comparison-card">
+                    <h3>Mechanical Engineer</h3>
+                    <p>This career appeals to my problem-solving skills and interest in how things work. The stable hours and good salary are attractive, but I wonder if I would miss more active work.</p>
+                    <p><strong>Best Aspect:</strong> Creative design opportunities</p>
+                    <p><strong>Biggest Concern:</strong> Potentially sedentary office work</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>Costco Warehouse</h3>
+                    <p>I like the active nature of this work and that it doesn't require a college degree. The benefits are surprisingly good for retail, but I'm not sure about long-term growth potential.</p>
+                    <p><strong>Best Aspect:</strong> Immediate employment opportunities</p>
+                    <p><strong>Biggest Concern:</strong> Physical demands over time</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>Pilot</h3>
+                    <p>The most exciting option with great travel benefits. The training is intensive and expensive, but the career offers unique rewards. The irregular schedule might be challenging.</p>
+                    <p><strong>Best Aspect:</strong> Adventure and high earnings potential</p>
+                    <p><strong>Biggest Concern:</strong> Time away from home</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reflection-section">
+            <h2><i class="fas fa-chart-pie"></i> Career Comparison</h2>
+            <p>When evaluating these careers side by side, some clear differences emerge:</p>
+            <ul>
+                <li><strong>Education Investment:</strong> Pilot requires the most training, Costco the least</li>
+                <li><strong>Earning Potential:</strong> Pilot has highest ceiling, Costco the most modest</li>
+                <li><strong>Work Environment:</strong> Mechanical engineer most office-based, Costco most physical</li>
+                <li><strong>Career Stability:</strong> All three offer good stability in different ways</li>
+                <li><strong>Lifestyle Impact:</strong> Pilot would involve most travel, Costco most local</li>
+            </ul>
+        </div>
+
+        <div class="conclusion">
+            <h2><i class="fas fa-check-circle"></i> My Current Thinking</h2>
+            <p>At this point, I'm leaning toward [Your Preferred Career] because [Your Reasons]. However, I recognize that [Alternative Career] also has appealing aspects, particularly [Specific Quality].</p>
+            <p>What's clear is that each path offers distinct advantages and would lead to very different lifestyles. My next steps should be [Your Planned Actions].</p>
+        </div>
+
+        <form>
+            <h2><i class="fas fa-edit"></i> Share Your Thoughts</h2>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="career">Which career interests you most?</label>
+                <select id="career" name="career">
+                    <option value="">Select one...</option>
+                    <option value="mechanical">Mechanical Engineer</option>
+                    <option value="costco">Costco Warehouse</option>
+                    <option value="pilot">Pilot</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Your Thoughts</label>
+                <textarea id="comments" name="comments" rows="5"></textarea>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Career Exploration Project | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i></p>
+    </footer>
+</body>
+</html>

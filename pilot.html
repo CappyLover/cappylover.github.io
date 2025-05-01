@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot | Career Exploration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .hero {
+            position: relative;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            background-color: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .salary-card {
+            background: linear-gradient(135deg, var(--primary), #2980b9);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .pathway {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .path-card {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        @media (max-width: 768px) {
+            .pros-cons, .pathway {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .social-icons {
+            margin: 1rem 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--primary);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--primary);
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--primary);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--primary) transparent transparent;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Commercial Pilot</h1>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="mechanical-engineer.html"><i class="fas fa-cogs"></i> Mechanical Engineer</a>
+        <a href="costco-warehouse.html"><i class="fas fa-boxes"></i> Costco Warehouse</a>
+        <a href="pilot.html"><i class="fas fa-plane"></i> Pilot</a>
+        <a href="your-thoughts.html"><i class="fas fa-comment"></i> Your Thoughts</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Soaring Above the Clouds</h2>
+                <p>Pilots navigate aircraft safely while transporting passengers and cargo across the globe.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-briefcase"></i> Job Summary & Responsibilities</h2>
+            <p>Airline pilots fly and navigate airplanes, helicopters, and other aircraft. Airline pilots typically transport people and cargo on a fixed schedule.</p>
+            <ul>
+                <li>Check aircraft before flights (mechanical condition, fuel, equipment)</li>
+                <li>Operate aircraft according to flight plans and air traffic control instructions</li>
+                <li>Monitor engines, fuel consumption, and other systems during flight</li>
+                <li>Communicate with air traffic control during takeoff, flight, and landing</li>
+                <li>Respond to changing conditions and emergencies</li>
+                <li>Work schedule: Irregular hours including nights, weekends, and holidays</li>
+                <li>Work locations: Commercial airlines, cargo carriers, charter services</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Top 5 Required Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Decision Making</h3>
+                    <p>Quick, sound judgments in emergency situations</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Technical Skills</h3>
+                    <p>Understanding complex aircraft systems</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-comments"></i>
+                    <h3>Communication</h3>
+                    <p>Clear coordination with crew and ATC</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Spatial Awareness</h3>
+                    <p>Strong sense of direction and positioning</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Stress Management</h3>
+                    <p>Remaining calm under pressure</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education Requirements</h2>
+            <ul>
+                <li>Bachelor's degree (often in aviation, engineering, or related field)</li>
+                <li>FAA-approved flight school training</li>
+                <li>Airline Transport Pilot (ATP) certification requires 1,500 flight hours</li>
+                <li>Military flight training also a common path</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-certificate"></i> Certification & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Private Pilot License</h3>
+                        <p>40-60 flight hours minimum</p>
+                        <p>Written and practical exams</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Commercial Pilot License</h3>
+                        <p>250 flight hours minimum</p>
+                        <p>Advanced flight training</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Instrument Rating</h3>
+                        <p>Flying by instruments only</p>
+                        <p>Required for most commercial jobs</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Airline Transport Pilot License</h3>
+                        <p>1,500 flight hours minimum</p>
+                        <p>Final step to airline captain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-chart-bar"></i> Job Outlook</h2>
+            <p>The U.S. Bureau of Labor Statistics projects:</p>
+            <ul>
+                <li>4% growth from 2022 to 2032 (about as fast as average)</li>
+                <li>16,800 openings projected annually</li>
+                <li>Strongest demand in regional and cargo carriers</li>
+                <li>Potential pilot shortage due to mandatory retirements</li>
+            </ul>
+        </div>
+
+        <div class="salary-card">
+            <h2><i class="fas fa-money-bill-wave"></i> Earning Potential</h2>
+            <p><strong>Median Annual Salary:</strong> $148,900 (May 2022)</p>
+            <p><strong>Top 10% Earned:</strong> More than $239,200</p>
+            <p><strong>Starting Salary (Regional):</strong> $50,000-$80,000</p>
+            <p><strong>Major Airlines:</strong> $150,000-$300,000+ after seniority</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-sitemap"></i> Related Job Titles</h2>
+            <div class="pathway">
+                <div class="path-card">
+                    <h3>Commercial Pilot</h3>
+                    <p>Charter flights, cargo, or regional airlines</p>
+                </div>
+                <div class="path-card">
+                    <h3>Flight Instructor</h3>
+                    <p>Train new pilots while building flight hours</p>
+                </div>
+                <div class="path-card">
+                    <h3>Air Traffic Controller</h3>
+                    <p>Coordinate aircraft movements from the ground</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-thumbs-up"></i> <i class="fas fa-thumbs-down"></i> Student Perspective</h2>
+            <div class="pros-cons">
+                <div>
+                    <h3>What I Like:</h3>
+                    <ul>
+                        <li>Exciting, non-desk job with travel opportunities</li>
+                        <li>High earning potential at major airlines</li>
+                        <li>Respected professional career</li>
+                        <li>Constant learning and challenges</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>What I Don't Like:</h3>
+                    <ul>
+                        <li>Expensive training requirements</li>
+                        <li>Irregular schedule and time away from home</li>
+                        <li>High stress and responsibility</li>
+                        <li>Slow career progression initially</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-check-circle"></i> Is This a Good Fit For Me?</h2>
+            <p>This career would be a good fit if you have excellent spatial awareness, thrive under pressure, don't mind irregular schedules, and are passionate about aviation. It requires significant upfront investment in training but offers rewarding work and excellent compensation at senior levels.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-home"></i> Lifestyle Considerations</h2>
+            <p>A pilot career can support:</p>
+            <ul>
+                <li>Upper-middle class to wealthy lifestyle (depending on airline and seniority)</li>
+                <li>Frequent travel opportunities</li>
+                <li>Non-traditional work schedule with blocks of days off</li>
+                <li>Potential to live in base cities worldwide</li>
+                <li>High job satisfaction for aviation enthusiasts</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Career Exploration Project | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i></p>
+    </footer>
+</body>
+</html>

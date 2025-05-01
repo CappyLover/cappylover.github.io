@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineer | Career Exploration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .hero {
+            position: relative;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            background-color: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .salary-card {
+            background: linear-gradient(135deg, var(--primary), #2980b9);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .social-icons {
+            margin: 1rem 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mechanical Engineer</h1>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="mechanical-engineer.html"><i class="fas fa-cogs"></i> Mechanical Engineer</a>
+        <a href="costco-warehouse.html"><i class="fas fa-boxes"></i> Costco Warehouse</a>
+        <a href="pilot.html"><i class="fas fa-plane"></i> Pilot</a>
+        <a href="your-thoughts.html"><i class="fas fa-comment"></i> Your Thoughts</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Designing the Future</h2>
+                <p>Mechanical engineers create, analyze, and maintain mechanical systems that power our world.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-briefcase"></i> Job Summary & Responsibilities</h2>
+            <p>Mechanical engineers design, develop, build, and test mechanical and thermal devices including tools, engines, and machines. They work in various industries from automotive to aerospace.</p>
+            <ul>
+                <li>Analyze problems to see how mechanical devices might help solve them</li>
+                <li>Design or redesign mechanical devices using CAD software</li>
+                <li>Develop and test prototypes of devices they design</li>
+                <li>Oversee manufacturing process for the device</li>
+                <li>Work schedule: Typically full-time, sometimes overtime to meet deadlines</li>
+                <li>Work locations: Offices, factories, laboratories, or construction sites</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Top 5 Required Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Math Skills</h3>
+                    <p>Advanced mathematics including calculus and statistics</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>CAD Software</h3>
+                    <p>Proficiency in AutoCAD, SolidWorks, or similar</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Creativity</h3>
+                    <p>Innovative problem-solving abilities</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Teamwork</h3>
+                    <p>Collaboration with other engineers and professionals</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analytical Skills</h3>
+                    <p>Ability to analyze complex systems</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education Requirements</h2>
+            <p>Most mechanical engineering positions require:</p>
+            <ul>
+                <li>Bachelor's degree in mechanical engineering or mechanical engineering technology</li>
+                <li>ABET-accredited program preferred</li>
+                <li>Some positions may require a master's degree or PhD</li>
+                <li>Continuing education to keep up with technological advances</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-certificate"></i> Certification & Experience</h2>
+            <ul>
+                <li>Fundamentals of Engineering (FE) exam for entry-level</li>
+                <li>Professional Engineering (PE) license for higher levels</li>
+                <li>Internships or co-op experience highly valuable</li>
+                <li>Specialized certifications in areas like HVAC, robotics, or automotive systems</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-chart-bar"></i> Job Outlook</h2>
+            <p>The U.S. Bureau of Labor Statistics projects:</p>
+            <ul>
+                <li>2% growth from 2021 to 2031 (slower than average)</li>
+                <li>About 17,900 openings projected each year</li>
+                <li>Best opportunities for those with new technologies training</li>
+                <li>Strong demand in renewable energy and robotics fields</li>
+            </ul>
+        </div>
+
+        <div class="salary-card">
+            <h2><i class="fas fa-money-bill-wave"></i> Earning Potential</h2>
+            <p><strong>Median Annual Salary:</strong> $95,300 (May 2021)</p>
+            <p><strong>Top 10% Earned:</strong> More than $136,210</p>
+            <p><strong>Entry Level:</strong> Around $60,000</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-sitemap"></i> Related Job Titles</h2>
+            <ul>
+                <li>Automotive Engineer</li>
+                <li>HVAC Engineer</li>
+                <li>Robotics Engineer</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-thumbs-up"></i> <i class="fas fa-thumbs-down"></i> Student Perspective</h2>
+            <div class="pros-cons">
+                <div>
+                    <h3>What I Like:</h3>
+                    <ul>
+                        <li>Opportunity to work on diverse projects</li>
+                        <li>Good salary potential</li>
+                        <li>Ability to see tangible results of work</li>
+                        <li>Continuous learning opportunities</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>What I Don't Like:</h3>
+                    <ul>
+                        <li>Can be stressful with tight deadlines</li>
+                        <li>May require working in noisy environments</li>
+                        <li>Need for continuing education</li>
+                        <li>Some positions require extensive travel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-check-circle"></i> Is This a Good Fit For Me?</h2>
+            <p>This career would be a good fit if you enjoy solving practical problems, have strong math and science skills, and like working with both computers and physical systems. It offers stability, good pay, and opportunities to work in many different industries.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-home"></i> Lifestyle Considerations</h2>
+            <p>A mechanical engineering career can support:</p>
+            <ul>
+                <li>Middle to upper-middle class lifestyle</li>
+                <li>Stable work hours in most positions</li>
+                <li>Opportunities to live in urban or suburban areas</li>
+                <li>Potential for international work in some specialties</li>
+                <li>Good work-life balance in many positions</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Career Exploration Project | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i></p>
+    </footer>
+</body>
+</html>
