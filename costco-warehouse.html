@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costco Warehouse | Career Exploration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #e74c3c);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .hero {
+            position: relative;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            background-color: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        .skill-item i {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+        .salary-card {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .job-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .job-card {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        @media (max-width: 768px) {
+            .pros-cons, .job-types {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .social-icons {
+            margin: 1rem 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Costco Warehouse Worker</h1>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="mechanical-engineer.html"><i class="fas fa-cogs"></i> Mechanical Engineer</a>
+        <a href="costco-warehouse.html"><i class="fas fa-boxes"></i> Costco Warehouse</a>
+        <a href="pilot.html"><i class="fas fa-plane"></i> Pilot</a>
+        <a href="your-thoughts.html"><i class="fas fa-comment"></i> Your Thoughts</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Keeping Retail Moving</h2>
+                <p>Warehouse associates ensure smooth operations in one of America's most popular retail chains.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-briefcase"></i> Job Summary & Responsibilities</h2>
+            <p>Costco warehouse workers perform various tasks to maintain store operations, assist members, and manage inventory in a fast-paced retail environment.</p>
+            <ul>
+                <li>Receive, stock, and organize merchandise</li>
+                <li>Operate forklifts and pallet jacks (with certification)</li>
+                <li>Assist members with locating products and loading purchases</li>
+                <li>Maintain clean and safe work areas</li>
+                <li>Process returns and manage inventory</li>
+                <li>Work schedule: Full-time and part-time positions available, often including evenings, weekends, and holidays</li>
+                <li>Work locations: Costco warehouse stores, sometimes cross-training in multiple departments</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Top 5 Required Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-people-carry"></i>
+                    <h3>Physical Stamina</h3>
+                    <p>Ability to lift 50+ lbs and stand for long periods</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Customer Service</h3>
+                    <p>Friendly interaction with warehouse members</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-boxes"></i>
+                    <h3>Organization</h3>
+                    <p>Keeping merchandise properly stocked and displayed</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Efficiency</h3>
+                    <p>Working quickly in a fast-paced environment</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Equipment Operation</h3>
+                    <p>Forklift and pallet jack operation (with training)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education Requirements</h2>
+            <ul>
+                <li>High school diploma or equivalent typically required</li>
+                <li>No college degree necessary for most positions</li>
+                <li>On-the-job training provided</li>
+                <li>Special certifications for equipment operation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-certificate"></i> Certification & Experience</h2>
+            <ul>
+                <li>Forklift certification (often provided by employer)</li>
+                <li>Previous retail or warehouse experience helpful but not required</li>
+                <li>Food handler's card may be needed for certain departments</li>
+                <li>Cash handling experience for front-end positions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-chart-bar"></i> Job Outlook</h2>
+            <p>The U.S. Bureau of Labor Statistics projects for retail workers:</p>
+            <ul>
+                <li>Overall employment projected to show little or no change</li>
+                <li>High turnover creates regular job openings</li>
+                <li>Costco known for better wages/benefits than competitors</li>
+                <li>Opportunities for advancement within company</li>
+            </ul>
+        </div>
+
+        <div class="salary-card">
+            <h2><i class="fas fa-money-bill-wave"></i> Earning Potential</h2>
+            <p><strong>Starting Wage:</strong> $17-$18/hour (above industry average)</p>
+            <p><strong>Average Wage:</strong> $24/hour (after several years)</p>
+            <p><strong>Top Earners:</strong> $25-$30/hour (department managers)</p>
+            <p><strong>Benefits:</strong> Health insurance, 401(k), employee stock options</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-sitemap"></i> Related Job Titles at Costco</h2>
+            <div class="job-types">
+                <div class="job-card">
+                    <h3>Forklift Operator</h3>
+                    <p>Specializes in merchandise handling with powered equipment</p>
+                </div>
+                <div class="job-card">
+                    <h3>Cashier Assistant</h3>
+                    <p>Front-end position assisting with checkout process</p>
+                </div>
+                <div class="job-card">
+                    <h3>Stocking Associate</h3>
+                    <p>Focuses on receiving and organizing merchandise</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-thumbs-up"></i> <i class="fas fa-thumbs-down"></i> Student Perspective</h2>
+            <div class="pros-cons">
+                <div>
+                    <h3>What I Like:</h3>
+                    <ul>
+                        <li>No college degree required</li>
+                        <li>Good benefits for retail position</li>
+                        <li>Clear path for advancement</li>
+                        <li>Active work rather than sitting at desk</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>What I Don't Like:</h3>
+                    <ul>
+                        <li>Physically demanding work</li>
+                        <li>May require early morning shifts</li>
+                        <li>Working weekends/holidays</li>
+                        <li>Can be stressful during peak times</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-check-circle"></i> Is This a Good Fit For Me?</h2>
+            <p>This career would be a good fit if you prefer active work over desk jobs, enjoy customer interaction, and want stable employment with good benefits without needing a college degree. It's especially suitable if you're looking for entry-level work with advancement potential.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-home"></i> Lifestyle Considerations</h2>
+            <p>A Costco warehouse career can support:</p>
+            <ul>
+                <li>Working class to middle class lifestyle (depending on position)</li>
+                <li>Stable income with benefits uncommon in retail</li>
+                <li>Potential for overtime pay during busy seasons</li>
+                <li>Non-traditional work hours (early mornings, weekends)</li>
+                <li>Active workday rather than sedentary office job</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Career Exploration Project | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i></p>
+    </footer>
+</body>
+</html>
